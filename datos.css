@@ -81,6 +81,12 @@ body {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
     gap:1rem;
 }
+.tipos p{
+    font-size: 20px;
+    width: 6rem;
+    height: 3rem;
+    padding-top: 1.5rem;
+}
 
 .habilidades{
     text-transform: capitalize;
