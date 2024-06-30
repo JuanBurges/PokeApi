@@ -1,0 +1,509 @@
+
+body{
+    background-color: antiquewhite;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centra los elementos flexibles horizontalmente */
+    align-items: center; /* Centra los elementos flexibles verticalmente */
+    padding: 2% 0;
+    background: linear-gradient(to top, antiquewhite, rgb(122, 122, 122));
+    width: 100%; /* Opcional: asegura que el nav ocupe todo el ancho disponible */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el nav esté por encima del resto del contenido */
+}
+
+nav img{
+    width: 20%;
+    height: 10%;
+    margin: 2%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul li button {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Bordeado negro */
+    text-align: center;
+
+}
+
+.nav-item{
+    margin-left: 2%;
+}
+
+.buscador{
+    padding-right: 5% ;
+    padding-left: 2%;
+}
+
+.barraBuscar {
+    padding: 0.8rem;
+    width: 20rem; /* Ancho del input */
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 5px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    background-color: #f2f2f2; /* Color de fondo del input */
+    outline: none; /* Quita el contorno al enfocar */
+}
+
+.barraBuscar::placeholder {
+    color: #999; /* Color del texto del placeholder */
+}
+
+.barraBuscar:focus {
+    border-color: #66afe9; /* Cambia el borde al enfocar */
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6); /* Sombra al enfocar */
+}
+
+.listaPokemon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 20px;
+    padding-top: 20%;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.pokemon{
+    width: 30%;
+    height: 25rem;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    background-color: rgba(252, 255, 240, 0.582);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position:relative;
+}
+
+.pokemon:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-id-back {
+    position: absolute;
+    top: -2rem;
+    left: 82%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-weight: 800;
+    z-index: -1;
+    color: var(--clr-gray);
+}
+
+.pokemon-id{
+    display:none;
+}
+.pokemon-nombre{
+    font-size: 2rem;
+    text-shadow: 0 0 5px rgb(73, 73, 73);
+}
+
+.pokemon-tipos{
+    display: flex;
+    gap:1rem;
+}
+
+.pokemon img{
+    width: 13rem;
+    height:auto;
+}
+
+p[class*="tipo"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+    width: 100%;  
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+.normal{
+    background-color: rgb(219, 219, 219);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    
+}
+
+.normal:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.grass{
+    background-color: green;
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.grass:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.fire{
+    background-color: rgb(204, 99, 0);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.fire:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.water{
+    background-color: rgb(0, 139, 204);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.water:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.electric{
+    background-color: rgb(204, 201, 0);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.electric:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.ice{
+    background-color: rgb(0, 204, 187);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.ice:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.fighting{
+    background-color: rgb(255, 189, 151);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.fighting:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.poison{
+    background-color: rgb(128, 0, 145);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.poison:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.ground{
+    background-color: rgb(160, 114, 46);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.ground:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.flying{
+    background-color: rgb(214, 255, 255);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.flying:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.psychic{
+    background-color: rgb(255, 151, 215);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.psychic:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.bug{
+    background-color: rgb(0, 255, 0);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.bug:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.rock{
+    background-color: rgb(94, 65, 33);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.rock:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.ghost{
+    background-color: rgb(85, 44, 90);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.ghost:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.dark{
+    background-color: rgb(0, 0, 0);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.dark:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.dragon{
+    background-color: rgb(54, 62, 116);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.dragon:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.steel{
+    background-color: rgb(139, 139, 139);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+.steel:hover {
+    transform: scale(1.01); 
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.fairy{
+    background-color: rgb(251, 219, 255);
+    border:none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+
+
+
+
+
+

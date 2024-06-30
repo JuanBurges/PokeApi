@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="nav">
+            <img src="./imagenes/logo.png" alt="Logo Pokédex">
+            <ul class="nav-list">
+                <li class="nav-item"><button class="normal" id="normal">Normal</button></li>
+                <li class="nav-item"><button class="fire" id="fire">Fire</button></li>
+                <li class="nav-item"><button class="water" id="water">Water</button></li>
+                <li class="nav-item"><button class="grass" id="grass">Grass</button></li>
+                <li class="nav-item"><button class="electric" id="electric">Electric</button></li>
+                <li class="nav-item"><button class="ice" id="ice">Ice</button></li>
+                <li class="nav-item"><button class="fighting" id="fighting">Fighting</button></li>
+                <li class="nav-item"><button class="poison" id="poison">Poison</button></li>
+                <li class="nav-item"><button class="ground" id="ground">Ground</button></li>
+                <li class="nav-item"><button class="flying" id="flying">Flying</button></li>
+                <li class="nav-item"><button class="psychic" id="psychic">Psychic</button></li>
+                <li class="nav-item"><button class="bug" id="bug">Bug</button></li>
+                <li class="nav-item"><button class="rock" id="rock">Rock</button></li>
+                <li class="nav-item"><button class="ghost" id="ghost">Ghost</button></li>
+                <li class="nav-item"><button class="dark" id="dark">Dark</button></li>
+                <li class="nav-item"><button class="dragon" id="dragon">Dragon</button></li>
+                <li class="nav-item"><button class="steel" id="steel">Steel</button></li>
+                <li class="nav-item"><button class="fairy" id="fairy">Fairy</button></li>
+            </ul>
+            <div class="buscador">
+                <input class ="barraBuscar" type="search" name="query" placeholder="Buscar..." required>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+        <div id="todos">
+            <div class="listaPokemon" id="listaPokemon">
+            </div>
+        </div>
+
+    </main>
+
+    <script src="indice.js"></script>
+</body>
+</html>

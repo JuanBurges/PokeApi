@@ -1,0 +1,427 @@
+body {
+    margin: 0;
+    background-image: url('imagenes/fondo3.jpg'); /* Ruta relativa a la imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pokemonData{
+    display: flex;
+    flex-direction: column;
+    margin:0% 15% ;
+    padding-bottom: 2rem;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    background: linear-gradient(to top, antiquewhite, rgb(122, 122, 122));
+    flex-wrap: wrap;
+}
+
+.titulo h1 {
+    margin: 2rem;
+    font-size: 6rem;
+    text-transform: uppercase; 
+    letter-spacing: 0.1rem;
+    color: #000000;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 2px 0 #000, 2px 2px 0 #000; 
+}
+
+.volver{
+    margin:3rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.volver:hover{
+    transform: scale(1.1);
+
+}
+
+.datosBase{
+    display:flex;
+    flex-wrap: wrap;
+    gap:rem;
+}
+
+.datos {
+    background-color: rgb(105, 95, 255);
+    padding: 2rem;
+    margin-top: 12%;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; 
+    border-radius: 20px;
+    border: solid 5px;
+    text-align:start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.datosbase2{
+    display:flex;
+    flex-wrap: wrap;
+    gap:5rem;
+}
+
+.tipos{
+    margin-left: 1rem;
+    text-transform: capitalize;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+    gap:1rem;
+}
+
+.habilidades{
+    text-transform: capitalize;
+    background-color: rgb(63, 63, 63);
+    padding: 1rem;
+    color: aliceblue;
+    border-radius: 20px;
+    border: solid 5px;
+}
+
+.estadisticas{
+    text-transform: capitalize;
+    background-color: rgb(119, 93, 38);
+    padding: 1rem;
+    color: aliceblue;
+    border-radius: 20px;
+    border: solid 5px;
+}
+
+.movimientos {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Define 5 columnas con el mismo ancho */
+    gap: 10px; /* Espacio entre las celdas de la cuadrícula */
+    text-transform: capitalize;
+    padding-bottom: 5rem;
+    background-color: rgb(239, 255, 202);
+    padding: 1rem;
+    border-radius: 20px;
+    border: solid 5px;
+}
+@media (max-width: 1200px) {
+    .movimientos {
+        grid-template-columns: repeat(6, 1fr); /* Cambia a 6 columnas cuando el ancho de la pantalla sea menor o igual a 1200px */
+    }
+}
+
+@media (max-width: 900px) {
+    .movimientos {
+        grid-template-columns: repeat(4, 1fr); /* Cambia a 4 columnas cuando el ancho de la pantalla sea menor o igual a 900px */
+    }
+}
+
+@media (max-width: 600px) {
+    .movimientos {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas cuando el ancho de la pantalla sea menor o igual a 600px */
+    }
+}
+
+h2 {
+    padding: 10px 20px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+    text-shadow: -0.5px -0.5px 0 #ffffff, 0.5px -0.5px 0 #ffffff, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000; 
+}
+
+.sprites{
+    padding-top:3rem;
+}
+
+/*_________________________________________________________________________________________________________*/
+.normal{
+    background-color: rgb(219, 219, 219);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    
+}
+
+
+
+.grass{
+    background-color: green;
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.fire{
+    background-color: rgb(204, 99, 0);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+.water{
+    background-color: rgb(0, 139, 204);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.electric{
+    background-color: rgb(204, 201, 0);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.ice{
+    background-color: rgb(0, 204, 187);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.fighting{
+    background-color: rgb(255, 189, 151);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.poison{
+    background-color: rgb(128, 0, 145);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+
+.ground{
+    background-color: rgb(160, 114, 46);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.flying{
+    background-color: rgb(214, 255, 255);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.psychic{
+    background-color: rgb(255, 151, 215);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.bug{
+    background-color: rgb(0, 255, 0);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.rock{
+    background-color: rgb(94, 65, 33);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.ghost{
+    background-color: rgb(85, 44, 90);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+
+.dark{
+    background-color: rgb(0, 0, 0);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.dragon{
+    background-color: rgb(54, 62, 116);
+    border:none;
+    cursor: pointer;
+    
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.steel{
+    background-color: rgb(139, 139, 139);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    
+}
+
+
+
+.fairy{
+    background-color: rgb(251, 219, 255);
+    border:none;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
+    justify-content: center;
+    
+}
+
+
+footer{
+    background-color: #272727;
+    color: white;
+    padding-bottom: 10%;
+}
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Pokémon</title>
+    <link rel="stylesheet" href="datos.css">
+</head>
+<body>
+    
+    <div class="pokemonData">
+        <div class="titulo">
+            <h1 id="pokemon-name"></h1>
+            <img src="imagenes/flecha.png" id="volver" class="volver">
+        </div>
+
+        <div class="datosBase">
+            <img id="pokemon-image" alt="Imagen del Pokémon">
+            <div class="datos">
+                <div>
+                    <h3>Numero de pokedex</h3>
+                    <p id="pokemon-id"></p>
+                </div>
+                
+                <div class="tipos" id="pokemon-types">
+
+                </div>
+                <div>
+                    <h3>Altura</h3>
+                    <p id="pokemon-height"></p>
+                </div>
+                <div>
+                    <h3>Peso</h3>
+                    <p id="pokemon-weight"></p>
+                </div>
+               
+            </div>
+            
+        </div>
+        
+        <div class="datosbase2">
+            <div>
+                <h2>Habilidades</h2>
+                <div class="habilidades" id="pokemon-abilities"></div>
+            </div>
+            
+            <div>
+                <h2>Estadisticas base</h2>
+                <div class="estadisticas" id="pokemon-base-stats"></div>
+            </div>
+            
+        </div>
+       
+
+        <div id="pokemon-sprites" class="sprites"></div>
+
+        <h2>Moviminetos que aprende</h2>
+        <div class="movimientos" id="pokemon-moves"></div>
+
+        </div>
+        
+        
+    </div>
+
+<footer>
+</footer>
+
+    <script src="datosPokemon.js"></script>
+</body>
+</html>
